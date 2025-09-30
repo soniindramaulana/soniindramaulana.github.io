@@ -9,10 +9,9 @@ export default function Education() {
       institution: "Trunojoyo Madura University",
       location: "Bangkalan, Indonesia",
       period: "2021 – 2025",
-      status: "Current",
+      status: "Completed",
       achievements: [
         "Participant of Festival Ajang Sinergitas Teknologi 2021 – Web Design Category (November 2021)",
-        "Religious Mentor at Tafaqquh Fiddin UTM (August–December 2022)",
         "Committee Member of Festival Ajang Sinergitas Teknologi (FAST) UTM 2024 – Equipment Coordinator (August–November 2024)",
         "Participant of Informatics Competition & Festival 2024 – UI/UX Category (December 2024)"
       ]
@@ -144,7 +143,7 @@ export default function Education() {
                       </div>
                     </div>
                     <Badge variant="outline" className="self-start md:self-center">
-                      Leadership Role
+                      Educational Role
                     </Badge>
                   </div>
                 </CardHeader>

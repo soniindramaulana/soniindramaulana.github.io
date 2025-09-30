@@ -125,46 +125,47 @@ export default function Contact() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
+                <form method="POST" action="https://formspree.io/f/xpwydlgq" className="space-y-10">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
+                      Name
+                    </label>
+                    <Input name="name" placeholder="Your name" />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
+                      Email
+                    </label>
+                    <Input name="email" type="email" placeholder="your.email@example.com" />
+                  </div>
+                </div>
+                
                 <div>
                   <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
-                    Name
+                    Subject
                   </label>
-                  <Input placeholder="Your name" />
+                  <Input placeholder="What's this about?" name="subject" required/>
                 </div>
+                
                 <div>
                   <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
-                    Email
+                    Message
                   </label>
-                  <Input type="email" placeholder="your.email@example.com" />
+                  <Textarea 
+                    placeholder="Tell me about your project or opportunity..."
+                    rows={5}
+                    name="message" // Pastikan ada atribut 'name'
+                    required
+                  />
                 </div>
-              </div>
+                
+                <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+                  <Send className="w-4 h-4 mr-2" />
+                  Send Message
+                </Button>
+                </form>
               
-              <div>
-                <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
-                  Subject
-                </label>
-                <Input placeholder="What's this about?" />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
-                  Message
-                </label>
-                <Textarea 
-                  placeholder="Tell me about your project or opportunity..."
-                  rows={5}
-                />
-              </div>
-              
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-                <Send className="w-4 h-4 mr-2" />
-                Send Message
-              </Button>
-              
-              <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
-                I'll get back to you within 24 hours!
-              </p>
             </CardContent>
           </Card>
         </div>

@@ -46,10 +46,10 @@ export default function Index() {
       <footer className="bg-slate-900 dark:bg-slate-950 text-white py-8">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <p className="text-slate-300">
-            © 2024 Soni Indra Maulana. Built with React, TypeScript, and Tailwind CSS.
+            © 2025 Soni Indra Maulana. Built with React, TypeScript, and Tailwind CSS.
           </p>
           <p className="text-slate-400 text-sm mt-2">
-            Full Stack Web Developer | Data Analyst | Problem Solver
+            Full Stack Web Developer | Data Analyst 
           </p>
         </div>
       </footer>

@@ -18,12 +18,14 @@ export default function Projects() {
         "User-friendly interface for media enthusiasts"
       ],
       technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript", "HTML/CSS"],
-      category: "Web Development"
+      category: "Web Development",
+      liveLink: "https://akmaloid.creypoer.me/",
+      repoLink: "https://github.com/CreyPoer/akmaloidmedia"
     },
     {
       title: "Hotel PKP-RI Bangkalan",
       subtitle: "Hotel Reservation & Management Information System",
-      period: "December 2023 – January 2024", 
+      period: "December 2023 – January 2024",
       type: "Internship Project",
       description: "A comprehensive hotel management system developed to streamline room booking processes and enhance client experience through an interactive and responsive website design.",
       features: [
@@ -33,13 +35,15 @@ export default function Projects() {
         "Interactive booking interface"
       ],
       technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "HTML/CSS"],
-      category: "Web Development"
+      category: "Web Development",
+      liveLink: "https://hotel-pkpri.urbeing.web.id/home",
+      repoLink: "https://github.com/CreyPoer/HOTEL_PKPRI/tree/master"
     },
     {
       title: "Wine Quality Classification",
       subtitle: "Machine Learning Classification & Prediction System",
       period: "November 2023 – December 2023",
-      type: "Personal Project", 
+      type: "Personal Project",
       description: "A data science project implementing machine learning techniques to classify and predict wine quality using the CRISP-DM methodology and Random Forest algorithm with GridSearchCV optimization.",
       features: [
         "Wine quality classification using Random Forest",
@@ -49,7 +53,9 @@ export default function Projects() {
         "CRISP-DM methodology implementation"
       ],
       technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-      category: "Data Science"
+      category: "Data Science",
+      liveLink: "https://github.com/CreyPoer/Proyek_Sains_Data",
+      repoLink: "https://creypoer.github.io/Proyek_Sains_Data/wine.html"
     },
     {
       title: "Jokotole Pencak Silat Information System",
@@ -61,11 +67,12 @@ export default function Projects() {
         "Custom Content Management System (CMS)",
         "News and articles management",
         "Event management system",
-        "Responsive design for all devices",
         "Team collaboration features"
       ],
       technologies: ["PHP Native", "JavaScript", "Bootstrap", "MySQL", "HTML/CSS"],
-      category: "Web Development"
+      category: "Web Development",
+      liveLink: "https://jokotole.urbeing.web.id/",
+      repoLink: "https://github.com/akwoakwo/jokotole"
     }
   ];
 
@@ -146,13 +153,24 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-2 pt-2">
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <ExternalLink className="w-3 h-3 mr-1" />
-                    View Project
-                  </Button>
-                  <Button size="sm" variant="ghost">
-                    <Github className="w-3 h-3" />
-                  </Button>
+                  {/* 1. Tombol View Project (Live Link) */}
+                  {project.liveLink && ( // Hanya tampilkan jika liveLink ada
+                    <Button size="sm" variant="outline" className="flex-1" asChild>
+                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        View Project
+                      </a>
+                    </Button>
+                  )}
+
+                  {/* 2. Tombol GitHub (Repo Link) */}
+                  {project.repoLink && ( // Hanya tampilkan jika repoLink ada
+                    <Button size="sm" variant="ghost" asChild>
+                      <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-3 h-3" />
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Code, Database, BarChart3, Wrench, Users, Brain } from 'lucide-react';
+import { link } from 'fs';
 
 export default function Skills() {
   const skillCategories = [
@@ -10,10 +11,10 @@ export default function Skills() {
       title: "Frontend Development",
       skills: [
         { name: "HTML/CSS", level: 90 },
-        { name: "JavaScript", level: 85 },
+        { name: "JavaScript", level: 80 },
         { name: "Bootstrap", level: 88 },
-        { name: "React", level: 75 },
-        { name: "Tailwind CSS", level: 80 }
+        { name: "React", level: 50 },
+        { name: "Tailwind CSS", level: 70 }
       ]
     },
     {
@@ -22,9 +23,9 @@ export default function Skills() {
       skills: [
         { name: "PHP", level: 90 },
         { name: "Laravel", level: 88 },
-        { name: "MySQL", level: 85 },
-        { name: "REST API", level: 82 },
-        { name: "Oracle", level: 70 }
+        { name: "MySQL", level: 90 },
+        { name: "REST API", level: 88 },
+        { name: "Oracle", level: 80 }
       ]
     },
     {
@@ -44,7 +45,7 @@ export default function Skills() {
       skills: [
         { name: "Git/GitHub", level: 85 },
         { name: "GitLab", level: 82 },
-        { name: "Figma", level: 75 },
+        { name: "Figma", level: 60 },
         { name: "jQuery", level: 80 },
         { name: "SQL", level: 88 }
       ]
@@ -52,7 +53,7 @@ export default function Skills() {
   ];
 
   const softSkills = [
-    "Teamwork", "Leadership", "Critical Thinking", 
+    "Teamwork", "Leadership", "Critical Thinking",
     "Problem Solving", "Time Management", "Adaptability"
   ];
 
@@ -61,25 +62,50 @@ export default function Skills() {
       title: "1st Place Team in National Competition (Web Design Category)",
       issuer: "HIMATIF UTM",
       year: "2021",
-      type: "Award"
+      type: "Award",
+      link: "https://drive.google.com/file/d/1cm6zZI03_TWtKkITdNqkldyuuigX_OVX/view?usp=drive_link"
     },
     {
       title: "Certificate of Competence Junior Web Developer",
       issuer: "Badan Nasional Sertifikasi Profesi",
       year: "2024",
-      type: "Certification"
+      type: "Certification",
+      link: "https://drive.google.com/file/d/1OzFVBZ82Msm7U8sQdQo2_ILnSEtLj7Qg/view?usp=drive_link"
     },
     {
       title: "MSIB Batch 6 Full Stack Web Developer Program",
       issuer: "PT. Arkatama Multi Solusindo",
       year: "2024",
-      type: "Program"
+      type: "Program",
+      link: "https://drive.google.com/file/d/1URPqaA6HJSTdstrp2ma920crq7CbkmsH/view?usp=sharing"
     },
     {
       title: "Basic Data Science Bootcamp",
       issuer: "Dicoding Academy",
       year: "2025",
-      type: "Bootcamp"
+      type: "Bootcamp",
+      link: "https://drive.google.com/file/d/1TMOTnnGV5Fg81DHdkViOBSa8PSA9lpZu/view?usp=sharing"
+    },
+    {
+      title: "Basic JavaScript Programming",
+      issuer: "Dicoding Academy",
+      year: "2023",
+      type: "Bootcamp",
+      link: "https://drive.google.com/file/d/11PYl6bGUrWRjnUKNAHO-xUW8C0xVkO6L/view?usp=drive_link"
+    },
+    {
+      title: "CSS Fundamentals: A Step-by-Step Guide for Beginners",
+      issuer: "PT Arkatama Multi Solusindo",
+      year: "2024",
+      type: "Bootcamp",
+      link: "https://drive.google.com/file/d/1nSPkE8qnEkYsbuWz42ywxiowtRY_6RS-/view?usp=drive_link"
+    },
+    {
+      title: "HTML Dasar dan HTML Form",
+      issuer: "PT Arkatama Multi Solusindo",
+      year: "2024",
+      type: "Bootcamp",
+      link: "https://drive.google.com/file/d/1PKvXRDiMnK_AeUhi0daRHU8novBP4Fmu/view?usp=drive_link"
     }
   ];
 
@@ -156,24 +182,42 @@ export default function Skills() {
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-4">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="p-4 border rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                    <div className="flex justify-between items-start mb-2">
-                      <Badge variant="outline" className="text-xs">
-                        {cert.type}
-                      </Badge>
-                      <span className="text-xs text-slate-500 dark:text-slate-400">
-                        {cert.year}
-                      </span>
-                    </div>
-                    <h4 className="font-medium text-slate-900 dark:text-white mb-1 text-sm">
-                      {cert.title}
-                    </h4>
-                    <p className="text-xs text-slate-600 dark:text-slate-300">
-                      {cert.issuer}
-                    </p>
-                  </div>
-                ))}
+                {certifications.map((cert, index) => {
+
+                  // Tentukan elemen berdasarkan apakah ada link
+                  const CertElement = cert.link ? 'a' : 'div';
+
+                  // Tentukan kelas hover
+                  const baseClasses = "p-4 border rounded-lg transition-colors cursor-pointer";
+                  const clickableClasses = "hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-blue-500/50";
+                  const finalClasses = `${baseClasses} ${cert.link ? clickableClasses : 'pointer-events-none'}`;
+
+                  return (
+                    <CertElement
+                      key={index}
+                      className={finalClasses}
+                      // Atribut hanya ditambahkan jika ada link
+                      href={cert.link || undefined}
+                      target={cert.link ? "_blank" : undefined}
+                      rel={cert.link ? "noopener noreferrer" : undefined}
+                    >
+                      <div className="flex justify-between items-start mb-2">
+                        <Badge variant="outline" className="text-xs">
+                          {cert.type}
+                        </Badge>
+                        <span className="text-xs text-slate-500 dark:text-slate-400">
+                          {cert.year}
+                        </span>
+                      </div>
+                      <h4 className="font-medium text-slate-900 dark:text-white mb-1 text-sm">
+                        {cert.title}
+                      </h4>
+                      <p className="text-xs text-slate-600 dark:text-slate-300">
+                        {cert.issuer}
+                      </p>
+                    </CertElement>
+                  );
+                })}
               </div>
             </CardContent>
           </Card>

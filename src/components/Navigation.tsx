@@ -49,10 +49,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-              SI
-            </div>
-            <span className="font-bold text-slate-900 dark:text-white">Soni Indra</span>
+            <span className="font-bold text-indigo-600 dark:text-white">Soni Indra Maulana</span>
           </div>
 
           {/* Desktop Navigation */}
