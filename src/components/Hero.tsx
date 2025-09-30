@@ -10,6 +10,8 @@ export default function Hero() {
   const linkedinLink = 'https://www.linkedin.com/in/soni-indra-23b430287/'; // Ganti dengan link LinkedIn Anda
   const linkedinMessageLink = 'https://www.linkedin.com/in/soni-indra-23b430287/overlay/contact-info/'; // URL profil LinkedIn Anda
 
+  const imagePath = `${import.meta.env.BASE_URL}fotosoni.jpg`; 
+
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -23,7 +25,7 @@ export default function Hero() {
         {/* Profile Image Placeholder */}
         <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg">
           <img
-            src="../../public/fotosoni.jpg" // Ganti dengan path ke file gambar Anda
+            src={imagePath} // Ganti dengan path ke file gambar Anda
             alt="Soni Indra Avatar"
             className="w-full h-full object-cover" // Penting untuk mengisi dan memotong gambar
           />
