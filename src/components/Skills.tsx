@@ -49,7 +49,7 @@ export default function Skills() {
         { name: "jQuery", level: 80 },
         { name: "SQL", level: 88 }
       ]
-    }
+    },
   ];
 
   const softSkills = [
@@ -106,6 +106,62 @@ export default function Skills() {
       year: "2024",
       type: "Bootcamp",
       link: "https://drive.google.com/file/d/1PKvXRDiMnK_AeUhi0daRHU8novBP4Fmu/view?usp=drive_link"
+    },
+    {
+      title: "Oracle Data Platform 2025 Certified Foundations Associate", 
+      issuer: "Oracle University", 
+      year: "2025", 
+      type: "Certification",
+      link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=A6159EEEF753195997D49B33D3A51AA5FD742712CFBF266ED7614D08B1028E6A"
+    },
+    {
+      title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+      issuer: "Oracle University",
+      year: "2025",
+      type: "Certification",
+      link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=1E9A3A9DF28B580843CC3E93B65A484DAC667157866EFD2CBA560AFC8CCAAC4D"
+    },
+    {
+      title: "Certificate of Completion Bootcamp: Basic AI", 
+      issuer: "Dicoding Academy", 
+      year: "2025", 
+      type: "Bootcamp",
+      link: "https://drive.google.com/file/d/1q4XhzkhWYvXUe0gmg6BAPAEcH8fWhjtO/view?usp=drive_link"
+    },
+    {
+      title: "Certified of Completion The Origins I: HTML", 
+      issuer: "Codedax", 
+      year: "2025", 
+      type: "Course",
+      link: "https://www.credential.net/4dfce8b3-9393-4a26-9690-7a37fab134ca#acc.FecTOVph"
+    },
+    {
+      title: "Certified of Completion The Origins II: CSS", 
+      issuer: "Codedax",
+      year: "2025", 
+      type: "Course",
+      link: "https://www.credential.net/4af2a3fe-896c-425a-9259-ac39e5addf1a#acc.xyQzdAo1"
+    },
+    {
+      title: "Certified of Completion The Origins III: JavaScript", 
+      issuer: "Codedax", 
+      year: "2025", 
+      type: "Course",
+      link: "https://www.credential.net/ed8eb2f3-a135-4549-8cc9-7cdb7d45e271#acc.NR7zusnm"
+    },
+    {
+      title: "Certified of Completion Framework Valley: React", 
+      issuer: "Codedax", 
+      year: "2025", 
+      type: "Course",
+      link: "https://www.credential.net/82289450-7f78-4118-a8f9-6ae96b6adaaa#acc.HtkThQRf"
+    },
+    {
+      title: "Certified of Completion The Legend of Python",
+      issuer: "Codedax",
+      year: "2025",
+      type: "Course",
+      link: "https://www.credential.net/1972e771-8bdc-4400-b0c4-b44eb4c806d3#acc.yrxZfBho"
     }
   ];
 
