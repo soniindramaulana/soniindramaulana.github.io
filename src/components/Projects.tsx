@@ -2,8 +2,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, Calendar, Users } from 'lucide-react';
+import { useMode } from '@/context/ModeContext';
 
 export default function Projects() {
+  const { mode } = useMode();
+
   const projects = [
     {
       title: "Akmaloid Media",
@@ -76,6 +79,63 @@ export default function Projects() {
     }
   ];
 
+  // Additional Data Scientist projects (to show only in datascientist mode)
+  const dsProjects = [
+    {
+      title: 'Klasifikasi Kanker Kulit (Streamlit & MobileNetV2)',
+      subtitle: 'Image classification for skin cancer using MobileNetV2 and a Streamlit demo',
+      period: 'February 2025 – July 2025',
+      type: 'Thesis Project',
+      description: 'A skin cancer classification system trained with transfer learning on MobileNetV2 and served via a Streamlit app for interactive testing and visualization.',
+      features: [
+        'MobileNetV2 transfer learning for image classification',
+        'Streamlit web interface for easy model inference',
+        'Mobile-friendly demo workflow'
+      ],
+      technologies: ['Python', 'TensorFlow', 'Keras', 'Streamlit', 'OpenCV'],
+      category: 'Data Science',
+      liveLink: 'https://prediksikankerkulit-mobilenetv2.streamlit.app/',
+      repoLink: 'https://github.com/CreyPoer/Streamlit_Skripsi'
+    },
+    {
+      title: 'Klasifikasi Emosi melalui Audio',
+      subtitle: 'Audio emotion recognition using signal processing and ML models',
+      period: 'October 2023 – November 2023',
+      type: 'College Project',
+      description: 'An emotion classification pipeline which extracts audio features and trains a model to classify emotional states; presented with a Streamlit demo.',
+      features: [
+        'Feature extraction (MFCC, chroma, spectral features)',
+        'Model training and evaluation for emotion classification',
+        'Streamlit demo for audio upload and prediction'
+      ],
+      technologies: ['Python', 'Librosa', 'Scikit-learn', 'TensorFlow', 'Streamlit'],
+      category: 'Data Science',
+      liveLink: 'https://audio-emotion-classification.streamlit.app/',
+      repoLink: 'https://github.com/soniindramaulana/PSD_UTS_AUDIO'
+    },
+    {
+      title: 'Wine Quality Classification',
+      subtitle: 'Machine Learning Classification & Prediction System',
+      period: 'November 2023 – December 2023',
+      type: 'Personal Project',
+      description: 'A data science project implementing machine learning techniques to classify and predict wine quality using the CRISP-DM methodology and Random Forest algorithm with GridSearchCV optimization.',
+      features: [
+        'Wine quality classification using Random Forest',
+        'Model optimization with GridSearchCV',
+        'Data visualization with confusion matrix and ROC curves',
+        'Separate prediction interface'
+      ],
+      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+      category: 'Data Science',
+      liveLink: 'https://creypoer.github.io/Proyek_Sains_Data/wine.html',
+      repoLink: 'https://github.com/CreyPoer/Proyek_Sains_Data'
+    }
+  ];
+
+  const visibleProjects = mode === 'datascientist'
+    ? dsProjects
+    : projects.filter(p => p.category === 'Web Development');
+
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "Web Development":
@@ -89,19 +149,22 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 px-6 bg-white dark:bg-slate-900">
-      <div className="max-w-6xl mx-auto">
+  <div id="project-container" className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mb-8"></div>
+          <div
+            className="w-24 h-1 mx-auto mb-8"
+            style={{ backgroundImage: 'linear-gradient(90deg, hsl(var(--primary)), hsl(var(--sidebar-primary)))' }}
+          ></div>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             A showcase of my recent work in web development and data science, demonstrating my ability to create innovative solutions and deliver high-quality results.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
               <CardHeader className="bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-800 dark:to-blue-900/20">
                 <div className="flex justify-between items-start mb-2">
@@ -112,7 +175,7 @@ export default function Projects() {
                     {project.type}
                   </Badge>
                 </div>
-                <CardTitle className="text-xl text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <CardTitle className="text-xl text-slate-900 dark:text-white transition-colors" style={{ color: 'hsl(var(--primary))' }}>
                   {project.title}
                 </CardTitle>
                 <p className="text-sm text-slate-600 dark:text-slate-300 font-medium">
@@ -134,7 +197,7 @@ export default function Projects() {
                   <ul className="space-y-1">
                     {project.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
-                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-1.5 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: 'hsl(var(--primary))' }}></div>
                         <span>{feature}</span>
                       </li>
                     ))}

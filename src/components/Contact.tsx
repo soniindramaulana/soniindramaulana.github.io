@@ -48,8 +48,8 @@ export default function Contact() {
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mb-8"></div>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <div className="w-24 h-1 mx-auto mb-8 accent-bg"></div>
+          <p className="text-lg muted-light max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and development.
           </p>
         </div>
@@ -64,14 +64,15 @@ export default function Contact() {
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-center gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg hover:shadow-md transition-shadow">
-                    <div className="text-blue-600 dark:text-blue-400">
+                    <div className="accent">
                       {item.icon}
                     </div>
                     <div>
-                      <p className="text-sm text-slate-500 dark:text-slate-400">{item.label}</p>
+                      <p className="text-sm muted">{item.label}</p>
                       <a 
                         href={item.href}
-                        className="text-slate-900 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="font-medium transition-colors accent-hover"
+                        style={{ color: 'hsl(var(--muted-accent))' }}
                       >
                         {item.value}
                       </a>
@@ -88,16 +89,17 @@ export default function Contact() {
               <div className="space-y-4">
                 {socialLinks.map((link, index) => (
                   <div key={index} className="flex items-center gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg hover:shadow-md transition-shadow">
-                    <div className="text-blue-600 dark:text-blue-400">
+                    <div className="accent">
                       {link.icon}
                     </div>
                     <div>
-                      <p className="text-sm text-slate-500 dark:text-slate-400">{link.label}</p>
+                      <p className="text-sm muted">{link.label}</p>
                       <a 
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-900 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="font-medium transition-colors accent-hover"
+                        style={{ color: 'hsl(var(--muted-accent))' }}
                       >
                         {link.username}
                       </a>
@@ -107,11 +109,11 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg">
-              <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
+            <div className="p-6 rounded-lg accent-bg-subtle">
+              <h4 className="font-semibold" style={{ color: 'hsl(var(--muted-accent))' }}>
                 Let's Work Together!
               </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-300">
+              <p className="text-sm muted-light">
                 I'm actively seeking opportunities where I can continuously develop my skills and make meaningful contributions to a team. Whether it's a full-time position, freelance project, or collaboration, I'd love to hear from you.
               </p>
             </div>
@@ -128,13 +130,13 @@ export default function Contact() {
                 <form method="POST" action="https://formspree.io/f/xpwydlgq" className="space-y-10">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
+                    <label className="text-sm font-medium mb-2 block muted">
                       Name
                     </label>
                     <Input name="name" placeholder="Your name" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
+                    <label className="text-sm font-medium mb-2 block muted">
                       Email
                     </label>
                     <Input name="email" type="email" placeholder="your.email@example.com" />
@@ -142,14 +144,14 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
+                  <label className="text-sm font-medium mb-2 block muted">
                     Subject
                   </label>
                   <Input placeholder="What's this about?" name="subject" required/>
                 </div>
                 
                 <div>
-                  <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
+                  <label className="text-sm font-medium mb-2 block muted">
                     Message
                   </label>
                   <Textarea 
@@ -160,7 +162,7 @@ export default function Contact() {
                   />
                 </div>
                 
-                <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+                <Button type="submit" className="w-full" style={{ backgroundImage: 'linear-gradient(90deg, hsl(var(--primary)), hsl(var(--sidebar-primary)))', color: 'hsl(var(--primary-foreground))' }}>
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </Button>

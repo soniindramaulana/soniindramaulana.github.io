@@ -1,16 +1,17 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Mail, Phone, MapPin, Github, Linkedin, Download } from 'lucide-react';
+import { useMode } from '@/context/ModeContext';
 
 export default function Hero() {
-  // Data Anda
-  const emailAddress = 'sonione04@gmail.com'; // Ganti dengan email Anda
-  const cvLink = 'https://drive.google.com/file/d/10sCAHiZd28VYQXpIvC6p1zcDEW3sQ703/view?usp=drive_link'; // Ganti dengan link Google Drive CV Anda
-  const githubLink = 'https://github.com/CreyPoer'; // Ganti dengan link GitHub Anda
-  const linkedinLink = 'https://www.linkedin.com/in/soni-indra-23b430287/'; // Ganti dengan link LinkedIn Anda
-  const linkedinMessageLink = 'https://www.linkedin.com/in/soni-indra-23b430287/overlay/contact-info/'; // URL profil LinkedIn Anda
+  const { mode } = useMode();
 
-  const imagePath = `${import.meta.env.BASE_URL}fotosoni.jpg`; 
+  // mode-aware links and subtitle
+  const emailAddress = 'sonione04@gmail.com';
+  const linkedinLink = 'https://www.linkedin.com/in/soni-indra-23b430287/';
+  const linkedinMessageLink = 'https://www.linkedin.com/in/soni-indra-23b430287/overlay/contact-info/';
+
+  const imagePath = `${import.meta.env.BASE_URL}fotosoni.jpg`;
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -19,8 +20,26 @@ export default function Hero() {
     }
   };
 
+  const config = {
+    fullstack: {
+      subtitle: 'Full Stack Web Developer',
+      cvLink: 'https://drive.google.com/file/d/1UCj4YhBMtcH0Qb3iFEzKpeyF9XnWXmQH/view?usp=sharing',
+      githubLink: 'https://github.com/CreyPoer'
+    },
+    datascientist: {
+      subtitle: 'Data Scientist',
+      cvLink: 'https://drive.google.com/file/d/1Q4gkN4wheLF_iLW8aNB6uyZKH8B8QovG/view?usp=sharing',
+      githubLink: 'https://github.com/soniindramaulana'
+    }
+  } as const;
+
+  const active = mode === 'datascientist' ? config.datascientist : config.fullstack;
+
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 px-6 pt-16">
+    <section
+      className="min-h-screen flex items-center justify-center px-6 pt-16"
+      style={{ backgroundImage: 'linear-gradient(135deg, hsl(var(--background)), hsl(var(--primary) / 10%))' }}
+    >
       <div className="max-w-4xl mx-auto text-center space-y-8">
         {/* Profile Image Placeholder */}
         <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg">
@@ -33,16 +52,28 @@ export default function Hero() {
 
         {/* Name and Title */}
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <h1
+            className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent"
+            style={{ backgroundImage: 'linear-gradient(90deg, hsl(var(--primary)), hsl(var(--sidebar-primary)))' }}
+          >
             Soni Indra Maulana
           </h1>
-          <h2 className="text-2xl md:text-3xl text-slate-600 dark:text-slate-300 font-medium">
-            Full Stack Web Developer
+          <h2 id="hero-subtitle" className="text-2xl md:text-3xl text-slate-600 dark:text-slate-300 font-medium">
+            {active.subtitle}
           </h2>
           <div className="flex flex-wrap justify-center gap-2 mt-4">
-            <Badge variant="secondary" className="px-3 py-1">Frontend Developer</Badge>
-            <Badge variant="secondary" className="px-3 py-1">Backend Developer</Badge>
-            <Badge variant="secondary" className="px-3 py-1">Data Analyst</Badge>
+            {mode === 'datascientist' ? (
+              <>
+                <Badge variant="secondary" className="px-3 py-1">Machine Learning</Badge>
+                <Badge variant="secondary" className="px-3 py-1">Artificial Intelligence</Badge>
+                <Badge variant="secondary" className="px-3 py-1">Deep Learning</Badge>
+              </>
+            ) : (
+              <>
+                <Badge variant="secondary" className="px-3 py-1">Frontend Developer</Badge>
+                <Badge variant="secondary" className="px-3 py-1">Backend Developer</Badge>
+              </>
+            )}
           </div>
         </div>
 
@@ -66,8 +97,9 @@ export default function Hero() {
         <div className="flex flex-wrap justify-center gap-4">
           <Button
             size="lg"
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+            className="hover:opacity-90"
             asChild
+            style={{ backgroundImage: 'linear-gradient(90deg, hsl(var(--primary)), hsl(var(--sidebar-primary)))', color: 'hsl(var(--primary-foreground))' }}
           >
             {/* Arahkan ke link yang memaksa pengguna mengirim pesan (misal: LinkedIn atau WhatsApp) */}
             <a href={linkedinMessageLink} target="_blank" rel="noopener noreferrer">
@@ -77,8 +109,7 @@ export default function Hero() {
           </Button>
 
           <Button variant="outline" size="lg" asChild>
-            {/* Menggunakan href dan target="_blank" untuk link eksternal */}
-            <a href={cvLink} target="_blank" rel="noopener noreferrer">
+            <a id="hero-cv-link" href={active.cvLink} target="_blank" rel="noopener noreferrer">
               <Download className="w-4 h-4 mr-2" />
               Download CV
             </a>
@@ -88,8 +119,7 @@ export default function Hero() {
         {/* Social Links */}
         <div className="flex justify-center gap-4">
           <Button variant="ghost" size="icon" className="rounded-full" asChild>
-            {/* Link GitHub */}
-            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+            <a id="hero-github-link" href={active.githubLink} target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5" />
             </a>
           </Button>

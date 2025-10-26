@@ -98,4 +98,13 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Accent utilities driven by CSS variables (used for theme switching) */
+  .accent { color: hsl(var(--primary)); }
+  .accent-bg { background-image: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--sidebar-primary))); }
+  .accent-bg-subtle { background-image: linear-gradient(90deg, hsl(var(--primary) / 12%), hsl(var(--sidebar-primary) / 12%)); }
+  .accent-hover:hover { color: hsl(var(--primary)); }
+
+  .muted { color: hsl(var(--muted-accent)); }
+  .muted-light { color: hsl(var(--muted-accent-light)); }
 }
