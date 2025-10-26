@@ -123,7 +123,7 @@ export default function Skills() {
         issuer: "Dicoding Academy",
         year: "2023",
         type: "Bootcamp",
-        link: "https://drive.google.com/file/d/11PYl6bGUrWRjnUKNAHO-xUW8C0xVkO6L/view?usp=drive_link"
+        link: "https://www.dicoding.com/certificates/1OP81QK8QZQK"
       },
       {
         title: "Certified of Completion The Origins III: JavaScript",
@@ -168,14 +168,14 @@ export default function Skills() {
         issuer: "Dicoding Academy",
         year: "2025",
         type: "Bootcamp",
-        link: "https://drive.google.com/file/d/1TMOTnnGV5Fg81DHdkViOBSa8PSA9lpZu/view?usp=drive_link"
+        link: "https://www.dicoding.com/certificates/0LZ0RMMD0P65"
       },
       {
         title: "Certificate of Completion Bootcamp: Basic AI",
         issuer: "Dicoding Academy",
         year: "2025",
         type: "Bootcamp",
-        link: "https://drive.google.com/file/d/1q4XhzkhWYvXUe0gmg6BAPAEcH8fWhjtO/view?usp=drive_link"
+        link: "https://www.dicoding.com/certificates/ERZR2W72QPYV"
       },
       {
         title: "Certified of Completion The Legend of Python",
