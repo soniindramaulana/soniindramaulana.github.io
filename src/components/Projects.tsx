@@ -39,7 +39,7 @@ export default function Projects() {
       ],
       technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "HTML/CSS"],
       category: "Web Development",
-      liveLink: "https://hotel-pkpri.urbeing.web.id/home",
+      liveLink: "https://hotelpkpri.creypoer.me/home",
       repoLink: "https://github.com/CreyPoer/HOTEL_PKPRI/tree/master"
     },
     {
@@ -74,7 +74,7 @@ export default function Projects() {
       ],
       technologies: ["PHP Native", "JavaScript", "Bootstrap", "MySQL", "HTML/CSS"],
       category: "Web Development",
-      liveLink: "https://jokotole.urbeing.web.id/",
+      liveLink: "https://jokotole.creypoer.me/",
       repoLink: "https://github.com/akwoakwo/jokotole"
     }
   ];
