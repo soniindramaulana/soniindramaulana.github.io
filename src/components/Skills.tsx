@@ -127,14 +127,14 @@ export default function Skills() {
       },
       {
         title: "Certified of Completion The Origins III: JavaScript",
-        issuer: "Codedax",
+        issuer: "Codédex",
         year: "2025",
         type: "Course",
         link: "https://www.credential.net/ed8eb2f3-a135-4549-8cc9-7cdb7d45e271#acc.NR7zusnm"
       },
       {
         title: "Certified of Completion Framework Valley: React",
-        issuer: "Codedax",
+        issuer: "Codédex",
         year: "2025",
         type: "Course",
         link: "https://www.credential.net/82289450-7f78-4118-a8f9-6ae96b6adaaa#acc.HtkThQRf"
@@ -179,7 +179,7 @@ export default function Skills() {
       },
       {
         title: "Certified of Completion The Legend of Python",
-        issuer: "Codedax",
+        issuer: "Codédex",
         year: "2025",
         type: "Course",
         link: "https://www.credential.net/1972e771-8bdc-4400-b0c4-b44eb4c806d3#acc.yrxZfBho"
