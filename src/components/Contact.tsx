@@ -30,14 +30,14 @@ export default function Contact() {
     {
       icon: <Github className="w-5 h-5" />,
       label: "GitHub",
-      username: "soniindra",
-      href: "https://github.com/soniindra"
+      username: "CreyPoer",
+      href: "https://github.com/CreyPoer"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn", 
-      username: "SoniIndraM",
-      href: "https://linkedin.com/in/soniindram"
+      username: "Soni Indra",
+      href: "https://www.linkedin.com/in/soni-indra-23b430287/"
     }
   ];
 
