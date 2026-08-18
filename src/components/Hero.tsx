@@ -24,7 +24,7 @@ export default function Hero() {
     fullstack: {
       subtitle: 'Full Stack Web Developer',
       cvLink: 'https://drive.google.com/file/d/1UCj4YhBMtcH0Qb3iFEzKpeyF9XnWXmQH/view?usp=sharing',
-      githubLink: 'https://github.com/CreyPoer'
+      githubLink: 'https://github.com/soniindramaulana'
     },
     datascientist: {
       subtitle: 'Data Scientist',

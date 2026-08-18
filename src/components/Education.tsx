@@ -12,8 +12,7 @@ export default function Education() {
       period: "2021 – 2025",
       status: "Completed",
       achievements: [
-        "Committee Member of Festival Ajang Sinergitas Teknologi (FAST) UTM 2024 – Equipment Coordinator (August–November 2024)",
-        "Participant of Informatics Competition & Festival 2024 – UI/UX Category (December 2024)"
+        "Committee Member of Festival Ajang Sinergitas Teknologi (FAST) UTM 2024 – Equipment Coordinator, organized by Himpunan Mahasiswa Teknik Informatika UTM (August–November 2024)"
       ]
     }
   ];

@@ -5,21 +5,34 @@ import { Calendar, MapPin, Building } from 'lucide-react';
 export default function Experience() {
   const experiences = [
     {
+      title: "Web Management Specialist",
+      company: "Yayasan Rumah Bata Kreasi | Placement at Madura United FC",
+      location: "Pamekasan, Indonesia (Remote)",
+      period: "December 2025 – June 2026",
+      type: "Internship",
+      achievements: [
+        "Selected for MagangHub Batch 3 (2025) and placed at Madura United FC as a Web Management Specialist.",
+        "Contributed to the development and management of the club's digital web ecosystem, including the official club website, merchandise store, ticketing platform, and administrative dashboard/CMS.",
+        "Developed and maintained frontend and backend web solutions, including data management features, page structures, API integrations, content management, and website maintenance based on the club's requirements.",
+        "Contributed to the development of supporting systems, including e-commerce and ticketing workflows, payment gateway integration, user verification, and a face verification microservice for the ticketing ecosystem.",
+        "Successfully developed the official club website and its supporting admin CMS, which is currently used as the club's main website."
+      ],
+      skills: ["Next.js", "React", "TypeScript", "Laravel", "Node.js", "REST API", "MySQL", "Tailwind CSS", "TensorFlow.js"]
+    },
+    {
       title: "Full Stack Web Developer Study Independent",
       company: "PT. Arkatama Multi Solusindo",
       location: "Malang, Indonesia (Remote)",
       period: "February 2024 – June 2024",
       type: "Internship",
       achievements: [
-        "Participated in comprehensive program focusing on front-end and back-end website development",
-        "Mastered HTML, CSS, JavaScript, PHP, MySQL, Laravel, Bootstrap, and REST API",
-        "Led collaborative project for early marriage consultation website with religious court integration",
-        "Developed e-commerce website with advanced features for institutional collaboration",
-        "Achieved national-level professional certification in full-stack development",
-        "Implemented jQuery and DataTables integration within Laravel framework",
-        "Managed projects using GitLab for version control and team coordination"
+        "Mastered full-stack web development (HTML, CSS, JS, PHP, Laravel, REST API, MySQL) through intensive mentoring sessions and practical project applications.",
+        "Led a collaborative project to develop a specialized website (pre-marital service), delegating tasks and implementing core features such as a couple registration system for religious court assessors.",
+        "Developed a full-stack e-commerce website, focusing on implementing attractive product displays, an efficient ordering process, and payment transaction facilities.",
+        "Managed collaborative project development using GitLab for version control, code management, and team coordination.",
+        "Implemented jQuery to enhance front-end interactivity, integrating DataTables within the Laravel framework and displaying various types of data charts."
       ],
-      skills: ["Laravel", "PHP", "MySQL", "JavaScript", "HTML/CSS", "Bootstrap", "REST API", "jQuery", "GitLab"]
+      skills: ["Laravel", "PHP", "MySQL", "JavaScript", "HTML/CSS", "REST API", "jQuery", "GitLab"]
     },
     {
       title: "Information System Developer Intern",
@@ -28,12 +41,9 @@ export default function Experience() {
       period: "December 2023 – January 2024",
       type: "Internship",
       achievements: [
-        "Identified institutional problems and implemented technology-based solutions",
-        "Developed web-based information system to support business processes",
-        "Enhanced client convenience through integrated ordering system features",
-        "Promoted business efficiency through website integration and automation",
-        "Provided comprehensive guidance on website management and operations",
-        "Led team collaboration and organized task distribution effectively"
+        "Identified institutional business process problems and implemented web-based information system solutions.",
+        "Optimized business processes and enhanced institutional credibility through efficient website integration.",
+        "Provided guidance and training to internal staff on effective website management and operations."
       ],
       skills: ["Web Development", "System Analysis", "Team Leadership", "Client Consultation", "Business Process Optimization"]
     }

@@ -13,10 +13,12 @@ export default function Skills() {
       title: "Frontend Development",
       skills: [
         { name: "HTML/CSS", level: 90 },
-        { name: "JavaScript", level: 80 },
+        { name: "JavaScript", level: 85 },
+        { name: "TypeScript", level: 80 },
+        { name: "React", level: 80 },
+        { name: "Next.js", level: 75 },
+        { name: "Tailwind CSS", level: 80 },
         { name: "Bootstrap", level: 88 },
-        { name: "React", level: 50 },
-        { name: "Tailwind CSS", level: 70 },
         { name: "jQuery", level: 70 }
       ]
     },
@@ -24,20 +26,20 @@ export default function Skills() {
       icon: <Database className="w-6 h-6" />,
       title: "Backend Development",
       skills: [
-        { name: "PHP", level: 90 },
-        { name: "Laravel", level: 88 },
-        { name: "MySQL", level: 90 },
-        { name: "REST API", level: 88 }
+        { name: "PHP", level: 85 },
+        { name: "Laravel", level: 85 },
+        { name: "Node.js", level: 75 },
+        { name: "REST API", level: 88 },
+        { name: "MySQL", level: 90 }
       ]
     },
     {
       icon: <Wrench className="w-6 h-6" />,
-      title: "Tools & Technologies",
+      title: "Tools & Platforms",
       skills: [
         { name: "Git/GitHub", level: 85 },
         { name: "GitLab", level: 82 },
-        { name: "Figma", level: 60 },
-        { name: "SQL", level: 88 },
+        { name: "Vercel", level: 80 },
         { name: "PhpMyAdmin", level: 80 }
       ]
     }
@@ -46,7 +48,7 @@ export default function Skills() {
   const dsCategories = [
     {
       icon: <Code className="w-6 h-6" />,
-      title: "Programming",
+      title: "Programming & Database",
       skills: [
         { name: "Python", level: 85 },
         { name: "SQL", level: 80 }
@@ -54,27 +56,23 @@ export default function Skills() {
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Data Analysis & Manipulation",
+      title: "Data Analysis & Visualization",
       skills: [
         { name: "Pandas", level: 82 },
         { name: "NumPy", level: 80 },
-        { name: "Librosa", level: 60 }
+        { name: "Matplotlib", level: 75 },
+        { name: "Seaborn", level: 75 }
       ]
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Machine Learning & Deep Learning",
+      title: "Machine Learning & AI",
       skills: [
         { name: "Scikit-learn", level: 78 },
-        { name: "TensorFlow", level: 72 },
-        { name: "Keras", level: 70 }
-      ]
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Data Visualization",
-      skills: [
-        { name: "Matplotlib/Seaborn", level: 75 }
+        { name: "TensorFlow", level: 75 },
+        { name: "Keras", level: 70 },
+        { name: "TensorFlow.js", level: 70 },
+        { name: "face-api.js", level: 70 }
       ]
     },
     {
@@ -82,7 +80,7 @@ export default function Skills() {
       title: "Tools & Platforms",
       skills: [
         { name: "Streamlit", level: 80 },
-        { name: "Kaggle", level: 70 },
+        { name: "Kaggle", level: 75 },
         { name: "Git/GitHub", level: 85 }
       ]
     }

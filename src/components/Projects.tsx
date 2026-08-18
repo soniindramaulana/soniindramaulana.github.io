@@ -9,6 +9,73 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "Madura United FC — Official Club Website",
+      subtitle: "Responsive, SEO-Friendly & Multilingual Web Platform",
+      period: "February 2026 – April 2026",
+      type: "Internship Project",
+      description: "Developed the official Madura United FC website featuring a responsive and SEO-friendly interface, integrating dynamic content through REST APIs and implementing multilingual support.",
+      features: [
+        "Dynamic content integration (match schedules, league standings, news, player rosters)",
+        "Multilingual support (Indonesian & English)",
+        "Interactive animations and responsive media components"
+      ],
+      technologies: ["Next.js", "React", "TypeScript", "REST APIs"],
+      category: "Web Development",
+      liveLink: "https://maduraunitedfc.id/",
+      repoLink: "https://github.com/CreyPoer/MainWeb_MU"
+    },
+    {
+      title: "Madura United FC — Admin Dashboard & Headless CMS",
+      subtitle: "Laravel Backend, RESTful API & Content Management System",
+      period: "January 2026 – May 2026",
+      type: "Internship Project",
+      description: "Developed and maintained a Headless CMS and RESTful API backend using Laravel 11 to manage dynamic content across the club's digital ecosystem.",
+      features: [
+        "Interactive admin dashboard using Filament",
+        "API authentication using Laravel Passport",
+        "Midtrans payment services integration",
+        "Automated data retrieval for matches and standings"
+      ],
+      technologies: ["Laravel 11", "Filament", "RESTful API", "MySQL"],
+      category: "Web Development",
+      liveLink: "http://admin-mu.maduraunitedfc.id/",
+      repoLink: ""
+    },
+    {
+      title: "Madura United FC — Official Merchandise Store",
+      subtitle: "Next.js, React, TypeScript & E-Commerce Integration",
+      period: "April 2026 – May 2026",
+      type: "Internship Project",
+      description: "Developed a responsive e-commerce frontend for the official club merchandise store, building an end-to-end shopping experience.",
+      features: [
+        "Product catalog and details",
+        "Shopping cart and checkout",
+        "Delivery location selection using an interactive map",
+        "Midtrans Snap payment integration"
+      ],
+      technologies: ["Next.js", "React", "TypeScript", "Midtrans"],
+      category: "Web Development",
+      liveLink: "https://shop.maduraunitedfc.id/",
+      repoLink: ""
+    },
+    {
+      title: "Madura United FC — Official Ticketing Website",
+      subtitle: "Next.js Ticketing Platform & Payment Integration",
+      period: "April 2026 – May 2026",
+      type: "Internship Project",
+      description: "Developed the official ticketing website, implementing ticket purchasing flows and user verification based on browser geolocation.",
+      features: [
+        "Ticket purchasing flow and e-ticket access",
+        "User verification and Geo-KTP priority system",
+        "Zustand state management and Midtrans payment",
+        "E-ticket dashboard with QR codes/barcodes"
+      ],
+      technologies: ["Next.js", "React", "TypeScript", "Zustand"],
+      category: "Web Development",
+      liveLink: "https://tiket.maduraunitedfc.id/",
+      repoLink: ""
+    },
+    {
       title: "Akmaloid Media",
       subtitle: "Subscription & Ordering System for Print Media",
       period: "April 2024 – June 2024",
@@ -41,91 +108,76 @@ export default function Projects() {
       category: "Web Development",
       liveLink: "https://hotelpkpri.creypoer.me/home",
       repoLink: "https://github.com/CreyPoer/HOTEL_PKPRI/tree/master"
-    },
-    {
-      title: "Wine Quality Classification",
-      subtitle: "Machine Learning Classification & Prediction System",
-      period: "November 2023 – December 2023",
-      type: "Personal Project",
-      description: "A data science project implementing machine learning techniques to classify and predict wine quality using the CRISP-DM methodology and Random Forest algorithm with GridSearchCV optimization.",
-      features: [
-        "Wine quality classification using Random Forest",
-        "Model optimization with GridSearchCV",
-        "Data visualization with confusion matrix and ROC curves",
-        "Separate prediction interface",
-        "CRISP-DM methodology implementation"
-      ],
-      technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-      category: "Data Science",
-      liveLink: "https://github.com/CreyPoer/Proyek_Sains_Data",
-      repoLink: "https://creypoer.github.io/Proyek_Sains_Data/wine.html"
-    },
-    {
-      title: "Jokotole Pencak Silat Information System",
-      subtitle: "Martial Arts Organization Management System",
-      period: "September 2023 – December 2023",
-      type: "College Project",
-      description: "Official martial arts organization website developed from scratch with custom CMS for news and articles, event management system, and seamless cross-device user experience.",
-      features: [
-        "Custom Content Management System (CMS)",
-        "News and articles management",
-        "Event management system",
-        "Team collaboration features"
-      ],
-      technologies: ["PHP Native", "JavaScript", "Bootstrap", "MySQL", "HTML/CSS"],
-      category: "Web Development",
-      liveLink: "https://jokotole.creypoer.me/",
-      repoLink: "https://github.com/akwoakwo/jokotole"
     }
   ];
 
   // Additional Data Scientist projects (to show only in datascientist mode)
   const dsProjects = [
     {
-      title: 'Klasifikasi Kanker Kulit (Streamlit & MobileNetV2)',
-      subtitle: 'Image classification for skin cancer using MobileNetV2 and a Streamlit demo',
-      period: 'February 2025 – July 2025',
-      type: 'Thesis Project',
-      description: 'A skin cancer classification system trained with transfer learning on MobileNetV2 and served via a Streamlit app for interactive testing and visualization.',
+      title: "Madura United FC — Face Verification Microservice",
+      subtitle: "AI-Powered Face Verification & Serverless API",
+      period: "April 2026 – May 2026",
+      type: "Internship Project",
+      description: "Developed and implemented a serverless face verification microservice to support identity verification within the ticketing ecosystem.",
       features: [
-        'MobileNetV2 transfer learning for image classification',
-        'Streamlit web interface for easy model inference',
-        'Mobile-friendly demo workflow'
+        "Face detection using SSD MobileNetV1",
+        "Facial landmark detection and descriptor extraction",
+        "Image preprocessing workflows and OCR technology",
+        "Secured communication via API key authentication",
+        "Serverless deployment on Vercel"
       ],
-      technologies: ['Python', 'TensorFlow', 'Keras', 'Streamlit', 'OpenCV'],
-      category: 'Data Science',
-      liveLink: 'https://prediksikankerkulit-mobilenetv2.streamlit.app/',
-      repoLink: 'https://github.com/CreyPoer/Streamlit_Skripsi'
+      technologies: ["Node.js", "TensorFlow.js", "face-api.js"],
+      category: "Data Science",
+      liveLink: "https://drive.google.com/file/d/1EsI6lHwgFRvh-bOu3PAnmijpNKVyqIgT/view",
+      repoLink: ""
     },
     {
-      title: 'Klasifikasi Emosi melalui Audio',
-      subtitle: 'Audio emotion recognition using signal processing and ML models',
-      period: 'October 2023 – November 2023',
-      type: 'College Project',
-      description: 'An emotion classification pipeline which extracts audio features and trains a model to classify emotional states; presented with a Streamlit demo.',
+      title: "Skin Cancer Classification and Prediction",
+      subtitle: "Implementation of ROS & MobileNetV2 on Dermoscopic Images",
+      period: "February 2025 – July 2025",
+      type: "Thesis Project",
+      description: "Developed a deep learning model using the MobileNetV2 architecture with fine-tuning, applying Random Oversampling to address class imbalance.",
       features: [
-        'Feature extraction (MFCC, chroma, spectral features)',
-        'Model training and evaluation for emotion classification',
-        'Streamlit demo for audio upload and prediction'
+        "MobileNetV2 transfer learning with fine-tuning",
+        "Random Oversampling (ROS) implementation",
+        "Real-time data augmentation (ImageDataGenerator)",
+        "5-fold cross-validation and performance evaluation"
       ],
-      technologies: ['Python', 'Librosa', 'Scikit-learn', 'TensorFlow', 'Streamlit'],
-      category: 'Data Science',
-      liveLink: 'https://audio-emotion-classification.streamlit.app/',
-      repoLink: 'https://github.com/soniindramaulana/PSD_UTS_AUDIO'
+      technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Pandas"],
+      category: "Data Science",
+      liveLink: "https://prediksikankerkulit-mobilenetv2.streamlit.app/",
+      repoLink: "https://github.com/CreyPoer/Streamlit_Skripsi"
+    },
+    {
+      title: "Audio Emotion Classification",
+      subtitle: "Classifying Audio Emotions using KNN with PCA and Hyperparameter Tuning",
+      period: "October 2023 – November 2023",
+      type: "College Project",
+      description: "Developed a KNeighborsClassifier model to classify emotions from audio samples, using custom statistical features and optimization techniques.",
+      features: [
+        "Engineered 21 statistical features (ZCR, RMS energy, etc.)",
+        "KNeighborsClassifier (KNN) model development",
+        "Hyperparameter optimization with GridSearchCV",
+        "Principal Component Analysis (PCA) for dimensionality reduction"
+      ],
+      technologies: ["Python", "Scikit-learn", "Librosa", "Pandas"],
+      category: "Data Science",
+      liveLink: "https://audio-emotion-classification.streamlit.app/",
+      repoLink: "https://github.com/soniindramaulana/PSD_UTS_AUDIO"
     },
     {
       title: 'Wine Quality Classification',
-      subtitle: 'Machine Learning Classification & Prediction System',
+      subtitle: 'Applying Classification on The Wine Quality Dataset',
       period: 'November 2023 – December 2023',
-      type: 'Personal Project',
-      description: 'A data science project implementing machine learning techniques to classify and predict wine quality using the CRISP-DM methodology and Random Forest algorithm with GridSearchCV optimization.',
+      type: 'College Project',
+      description: 'Applied the CRISP-DM methodology to analyze, prepare, and model the Kaggle red wine quality dataset using Random Forest.',
       features: [
-        'Wine quality classification using Random Forest',
-        'Model optimization with GridSearchCV',
-        'Data visualization with confusion matrix and ROC curves',
-        'Separate prediction interface'
+        'CRISP-DM methodology implementation',
+        'Trained and evaluated multiple classification models',
+        'Hyperparameter optimization using GridSearchCV',
+        'Final model assessment with Confusion Matrix and ROC Curve'
       ],
-      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+      technologies: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Seaborn'],
       category: 'Data Science',
       liveLink: 'https://creypoer.github.io/Proyek_Sains_Data/wine.html',
       repoLink: 'https://github.com/CreyPoer/Proyek_Sains_Data'

@@ -8,58 +8,58 @@ export default function About() {
 
   // Mode-specific profile descriptions (inferred; replace with exact CV text if you provide it)
   const fullstackDescription = [
-    'An Information Technology graduate with a strong focus on building efficient web solutions. I design and implement full-stack applications using modern tools and frameworks.',
-    'Expert in front-end technologies (HTML, CSS, JavaScript, React) and back-end development with PHP and Laravel. Comfortable designing REST APIs and working with relational databases (MySQL).',
-    'I collaborate effectively in teams, lead small projects, and deliver production-ready web applications with a focus on performance and maintainability.'
+    'An Informatics Engineering graduate with a strong focus on Full Stack Web Development and a passion for building efficient, scalable, and user-focused digital solutions. I have practical experience developing web applications across both front-end and back-end environments.',
+    'Experienced with modern technologies such as Next.js, React, TypeScript, Laravel, Node.js, REST APIs, and MySQL. My experience includes developing responsive web interfaces, integrating APIs, managing data, building content management systems, and implementing e-commerce and ticketing solutions.',
+    'I am passionate about continuously improving my technical skills, solving real-world problems through technology, and contributing to the development of reliable and impactful digital products within a collaborative team.'
   ];
 
   const datascientistDescription = [
-    'A data-focused practitioner skilled in data analysis, machine learning, and model deployment. Experienced with Python, Pandas, NumPy, and machine learning workflows.',
-    'I build and evaluate predictive models, perform feature engineering, and create interactive demos using Streamlit to make models accessible to stakeholders.',
-    'I am certified in cloud data/AI foundations and focus on reproducible pipelines, model monitoring, and scalable deployment.'
+    'An Informatics Engineering graduate with a strong focus on Data Science and Machine Learning, with practical experience in data processing, analysis, model development, and evaluation. I have a solid understanding of the data science lifecycle and CRISP-DM methodology, supported by the Oracle Certified Data Science Professional certification.',
+    'Skilled in Python, Pandas, NumPy, SQL, Scikit-learn, TensorFlow, and Keras, with experience applying machine learning and deep learning techniques to classification problems.',
+    'My practical experience includes developing image classification and computer vision solutions, including a skin lesion classification project using MobileNetV2 and a face verification system using TensorFlow.js and face-api.js. I am interested in applying analytical and technical skills to solve real-world problems and develop data-driven solutions.'
   ];
 
   const highlights = mode === 'datascientist' ? [
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Data Analysis",
-      description: "Skilled in Python, Pandas, NumPy and exploratory data analysis"
+      description: "Skilled in Python, Pandas, NumPy and data visualization"
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: "Machine Learning & AI",
-      description: "Experience training models, transfer learning, and building inference pipelines"
+      title: "Machine Learning",
+      description: "Experience training classification models with Scikit-learn, TensorFlow, and Keras"
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Model Deployment",
-      description: "Deploying models with Streamlit and cloud services for interactive demos and production" 
+      title: "Computer Vision",
+      description: "Developing image classification and face verification solutions using MobileNetV2 and face-api.js"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Research & Evaluation",
-      description: "Model evaluation, validation, and communicating results to stakeholders"
+      title: "CRISP-DM Methodology",
+      description: "Applying structured approaches to solve real-world problems and develop data-driven solutions"
     }
   ] : [
     {
       icon: <Code className="w-6 h-6" />,
       title: "Full Stack Development",
-      description: "Expert in HTML, CSS, JavaScript, PHP, Laravel, and MySQL"
+      description: "Experienced in Next.js, React, TypeScript, Laravel, and Node.js"
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Database Management",
-      description: "Proficient in MySQL and Oracle database design and optimization"
+      title: "System Integration",
+      description: "Proficient in developing REST APIs, content management systems, and managing MySQL databases"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance & Optimization",
-      description: "Focus on web performance, optimized queries, and scalable architecture"
+      title: "E-Commerce & Ticketing",
+      description: "Implementing complex workflows including online payment gateway integrations and user verification"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Team Leadership",
-      description: "Experience in project coordination and team management"
+      title: "Team Collaboration",
+      description: "Strong focus on teamwork, problem solving, and delivering impactful digital products"
     }
   ];
 
