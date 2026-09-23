@@ -89,7 +89,7 @@ export default function Projects() {
       ],
       technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript", "HTML/CSS"],
       category: "Web Development",
-      liveLink: "https://akmaloid.creypoer.me/",
+      liveLink: "https://akmaloid.soniindra.dev/",
       repoLink: "https://github.com/CreyPoer/akmaloidmedia"
     },
     {
@@ -106,7 +106,7 @@ export default function Projects() {
       ],
       technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "HTML/CSS"],
       category: "Web Development",
-      liveLink: "https://hotelpkpri.creypoer.me/home",
+      liveLink: "https://hotelpkpri.soniindra.dev/home",
       repoLink: "https://github.com/CreyPoer/HOTEL_PKPRI/tree/master"
     }
   ];
@@ -201,7 +201,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 px-6 bg-white dark:bg-slate-900">
-  <div id="project-container" className="max-w-6xl mx-auto">
+      <div id="project-container" className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Featured Projects
